@@ -1,13 +1,20 @@
+import java.util.Scanner;
 
-class Main {
+class Main
+{
     public static void main(String[] args)
     {
-
+        System.out.println (numToText());
     }
-    public static String numToText ( int num)
+    public static String numToText()
     {
-
+        int num;
         String word = "zero";
+
+        Scanner scan = new Scanner (System.in);
+
+        System.out.print("Enter a number(0-9): ");
+        num = scan.nextInt();
 
         if(num == 1)
         {
@@ -41,10 +48,10 @@ class Main {
         }
         else if(num != 0)
         {
-            word = "number is out of bounds";
+            word = "numeber is out of bounds";
         }
 
-        return word;
+        return(word);
 
     }
 }
